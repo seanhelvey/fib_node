@@ -14,8 +14,8 @@ browser:
 http://localhost:xxxx/?n=10
 */
 
-var port = process.env.PORT || 5000
-var ip = '127.0.0.1';
+var port = process.env.PORT || 5000;
+var ip = '0.0.0.0';
 var http = require('http');
 
 http.createServer(function (req, res) {
