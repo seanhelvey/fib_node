@@ -1,0 +1,9 @@
+{
+  "name": "fib_node",
+  "version": "0.0.1",
+  "dependencies": {},
+  "engines": {
+    "node": "0.8.20",
+    "npm": "1.2.11"
+  }
+}
