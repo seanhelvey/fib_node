@@ -26,9 +26,14 @@ http.createServer(function (req, res) {
 
     res.writeHead(200, {'Content-Type': 'text/plain'});
 
-    //avoid favicon.ico request
-    if (typeof n != 'undefined') {
+    //avoid favicon.ico request & large n
+    if (typeof n != 'undefined' && n < 30) {
         res.write(fib(n) + '\n');
+    }
+
+    if (n >= 30){
+        res.write('please try n < 30\n');
+        res.write('heroku times out after 30s\n');
     }
 
     res.end('\n');

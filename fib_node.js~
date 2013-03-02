@@ -19,19 +19,19 @@ var ip = '0.0.0.0';
 var http = require('http');
 
 http.createServer(function (req, res) {
-	var url = require('url');
-	var url_parts = url.parse(req.url, true);
-	var query = url_parts.query;
-	var n = query['n'];
+    var url = require('url');
+    var url_parts = url.parse(req.url, true);
+    var query = url_parts.query;
+    var n = query['n'];
 
-	res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.writeHead(200, {'Content-Type': 'text/plain'});
 
-	//avoid favicon.ico request
-	if (typeof n != 'undefined') {
-	    res.write(fib(n) + '\n');
-	}
+    //avoid favicon.ico request
+    if (typeof n != 'undefined') {
+        res.write(fib(n) + '\n');
+    }
 
-	res.end('\n');
+    res.end('\n');
 
 }).listen(port, ip);
 
